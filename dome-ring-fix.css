@@ -1,0 +1,2 @@
+/* Full 360° ring: tiles facing away are hidden instead of appearing mirrored. */
+.dome-tile,.dome-tile button{backface-visibility:hidden;-webkit-backface-visibility:hidden}
