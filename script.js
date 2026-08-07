@@ -95,6 +95,15 @@ if (document.body.classList.contains('archive-page')) {
     <div class="dome-root" aria-label="可拖拽旋转的陶琉影像墙"><div class="dome"></div><div class="dome-overlay"></div><span class="dome-hint"><b>→</b> DRAG TO EXPLORE · 点击图片放大</span></div>`;
   archiveMain?.insertBefore(domeSection, archiveMain.querySelector('.archive-stats'));
 
+  const videoStyle = document.createElement('link');
+  videoStyle.rel = 'stylesheet';
+  videoStyle.href = 'archive-video.css';
+  document.head.appendChild(videoStyle);
+  const videoSection = document.createElement('section');
+  videoSection.className = 'archive-video';
+  videoSection.innerHTML = `<div class="archive-video__frame"><video controls playsinline preload="metadata" aria-label="淄博陶琉数字档案视频"><source src="assets/zibo-liuli-archive.mp4" type="video/mp4">你的浏览器暂不支持视频播放。</video><div class="archive-video__copy"><p>VIDEO ARCHIVE / 影像档案</p><h2>把瞬间，<br>留在光影里。</h2><p>这段影像将作为数字档案的一部分，记录淄博陶琉文化的现场感与流动的细节。</p><small>实践团队影像资料 · 本地播放</small></div></div>`;
+  archiveMain?.insertBefore(videoSection, archiveMain.querySelector('.archive-stats'));
+
   const domeRoot = domeSection.querySelector('.dome-root');
   const dome = domeSection.querySelector('.dome');
   const sourceImage = 'https://dimg04.c-ctrip.com/images/25t0e12000gkhucin9310_W_2048_1536.png_.webp?_fr=wc';
