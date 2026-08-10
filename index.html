@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="site-v2.css" />
+    <link rel="stylesheet" href="pixel-blast.css" />
   </head>
   <body>
     <div class="loading-screen" aria-hidden="true"><div class="loading-mark">陶</div><p>SHAPING LIGHT <span>0</span>%</p></div>
@@ -20,14 +21,25 @@
       <nav aria-label="主导航">
         <a href="#about">缘起</a>
         <a class="page-link" href="museum.html">博物馆</a>
-        <a class="page-link" href="market.html">琉璃市场</a>
+        <a class="page-link" href="factory.html">琉璃工厂</a>
         <a class="page-link" href="archive.html">数字档案</a>
       </nav>
       <a class="nav-cta magnetic" href="#sources">资料来源 ↗</a>
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
+      <section class="pixel-blast-intro" aria-labelledby="pixel-blast-title">
+        <canvas class="pixel-blast-intro__canvas" aria-hidden="true"></canvas>
+        <div class="pixel-blast-intro__grid" aria-hidden="true"></div>
+        <div class="pixel-blast-intro__copy">
+          <p class="pixel-blast-intro__eyebrow">ZIBO CERAMICS &amp; GLASS / 2026</p>
+          <h1 id="pixel-blast-title">一粒光，<br><em>正在成形。</em></h1>
+          <p>从泥与火的交汇处出发，走进淄博陶瓷琉璃的时间、技艺与当下。</p>
+          <a class="pixel-blast-intro__enter" href="#home-hero">进入现场 <span>↓</span></a>
+        </div>
+        <p class="pixel-blast-intro__hint">移动鼠标或手指，让像素泛起涟漪</p>
+      </section>
+      <section class="hero" id="home-hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow"><span></span> 东南大学暑期社会实践 · 2026</p>
           <h1 id="hero-title">一炉千年火<br /><em>满城陶琉光</em></h1>
@@ -51,34 +63,34 @@
           <h2>在一件器物里，<br />读一座城市。</h2>
           <div>
             <p>淄博陶瓷与琉璃，不只是被陈列或售卖的器物。它们连接着泥、火、矿物、手艺人与日常生活，也保留着一座工业城市绵延至今的美学记忆。</p>
-            <p>本次实践将走进淄博陶瓷琉璃博物馆与博山琉璃市场，以双点位观察“被讲述的传统”与“正在发生的传统”。</p>
+            <p>本次实践将走进淄博陶瓷琉璃博物馆与琉璃工厂，以双点位观察“被讲述的传统”与“正在发生的传统”。</p>
           </div>
         </div>
         <div class="fact-row">
           <article><strong>10000<span>+</span></strong><p>年陶瓷文化脉络<br /><small>博物馆展陈追溯至新石器时代早期后李文化</small></p></article>
           <article><strong>2014</strong><p>琉璃烧制技艺<br /><small>列入国家级非物质文化遗产代表性项目名录</small></p></article>
-          <article><strong>双点</strong><p>田野走访<br /><small>博物馆 × 市场，连接展陈与现实</small></p></article>
+          <article><strong>双点</strong><p>田野走访<br /><small>博物馆 × 工厂，连接展陈与生产现场</small></p></article>
         </div>
       </section>
 
       <section class="routes section" id="routes">
         <div class="section-head"><p class="section-tag">FIELD ROUTE / 调研路线</p><p>两处入口，一次理解陶琉文化的完整行走。</p></div>
         <div class="route-list">
-          <article class="route-card museum tilt-card">
+          <article class="route-card market factory-feature tilt-card">
             <div class="route-count">01</div><p class="route-label">LOOK / 看见脉络</p>
+            <h3>走进琉璃<br />工厂现场</h3>
+            <p class="route-copy">从展柜到窑炉、从原料到精修，在真实的生产现场理解琉璃如何被制作、塑形与打磨。</p>
+            <ul><li>观察窑炉、工位与工具构成的工艺现场</li><li>记录取料、塑形、冷却与精修的工作节奏</li><li>采集经许可的影像、声音与匠人故事</li></ul>
+            <a href="factory.html" class="card-link page-link">进入工厂专题 <span>→</span></a>
+            <div class="arch art-market"><div></div></div>
+          </article>
+          <article class="route-card museum museum-support tilt-card">
+            <div class="route-count">02</div><p class="route-label">LISTEN / 倾听当下</p>
             <h3>淄博陶瓷<br />琉璃博物馆</h3>
-            <p class="route-copy">从史前陶器到当代艺术作品，在器物、展签与空间叙事中梳理陶与琉的发展线索。</p>
+            <p class="route-copy">从器物、展签与空间叙事中梳理陶与琉的发展线索，为工厂走访提供历史与工艺背景。</p>
             <ul><li>观察展陈如何讲述技艺与地方文化</li><li>记录代表性器物、纹样与工艺信息</li><li>核对公开资料与现场解读</li></ul>
             <a href="museum.html" class="card-link page-link">进入博物馆专题 <span>→</span></a>
             <div class="arch art-museum"><div></div></div>
-          </article>
-          <article class="route-card market tilt-card">
-            <div class="route-count">02</div><p class="route-label">LISTEN / 倾听当下</p>
-            <h3>博山琉璃<br />市场走访</h3>
-            <p class="route-copy">在市场与店铺中，关注作品如何被制作、陈列、讲述和带回日常生活。</p>
-            <ul><li>观察产品类型、设计语言与消费场景</li><li>访谈从业者与消费者的真实感受</li><li>采集经许可的影像与故事线索</li></ul>
-            <a href="market.html" class="card-link page-link">进入市场专题 <span>→</span></a>
-            <div class="arch art-market"><div></div></div>
           </article>
         </div>
       </section>
@@ -100,26 +112,39 @@
       <section class="notes section" id="notes">
         <div class="notes-heading"><p class="section-tag">FIELD NOTES / 田野手记</p><h2>这部分，<br />等待我们的脚步。</h2></div>
         <div class="note-grid">
-          <article class="note active tilt-card"><span>即将更新</span><h3>市场里的一束光</h3><p>记录商户如何描述一件琉璃作品，也记录它被看见、被挑选、被带走的瞬间。</p><b>博山琉璃市场 / 待走访</b></article>
-          <article class="note tilt-card"><span>即将更新</span><h3>展柜中的时间线</h3><p>以一件器物为线索，串起博物馆中的历史、技艺与今日的观看。</p><b>陶瓷琉璃博物馆 / 待走访</b></article>
+          <article class="note active tilt-card"><span>工厂走访</span><h3>窑火旁的一束光</h3><p>记录琉璃从展柜到车间、从取料到塑形的过程，也记录匠人在高温旁专注工作的瞬间。</p><b>琉璃工厂 / 已走访</b></article>
+          <article class="note tilt-card"><span>博物馆走访</span><h3>展柜中的时间线</h3><p>从古陶瓷、古琉璃到近现代作品，沿着器物的变化认识材料、技艺与生活的演变。</p><b>陶瓷琉璃博物馆 / 已走访</b></article>
           <article class="note tilt-card"><span>即将更新</span><h3>我们问的三个问题</h3><p>传统如何进入日常？年轻人如何理解陶琉？数字传播能留下什么？</p><b>团队访谈 / 待整理</b></article>
         </div>
+      </section>
+
+      <section class="accordion-gallery section" aria-labelledby="gallery-title">
+        <div class="accordion-gallery__head"><p class="section-tag">FIELD SELECTION / 实拍选集</p><div><h2 id="gallery-title">在一束光里，<br />看见器物的时间。</h2><p>来自淄博陶瓷琉璃博物馆的团队实拍。移动至图片上方，展开一段器物与工艺的观看。</p></div></div>
+        <div class="accordion-gallery__track" role="list" aria-label="博物馆实拍影像画廊">
+          <button class="accordion-gallery__item" type="button" role="listitem"><img src="assets/museum-porcelain-figures.jpg" alt="淄博陶瓷琉璃博物馆馆藏陶瓷人物" loading="lazy" /><span><b>陶塑</b><small>人物与日常</small></span></button>
+          <button class="accordion-gallery__item" type="button" role="listitem"><img src="assets/museum-painted-plate.jpg" alt="淄博陶瓷琉璃博物馆馆藏彩绘瓷盘" loading="lazy" /><span><b>纹样</b><small>笔墨落在瓷上</small></span></button>
+          <button class="accordion-gallery__item is-active" type="button" role="listitem"><img src="assets/museum-lotus-glass.jpg" alt="淄博陶瓷琉璃博物馆馆藏琉璃莲花作品" loading="lazy" /><span><b>琉璃</b><small>一朵光里的莲</small></span></button>
+          <button class="accordion-gallery__item" type="button" role="listitem"><img src="assets/museum-yellow-glass.jpg" alt="淄博陶瓷琉璃博物馆馆藏黄色琉璃器物" loading="lazy" /><span><b>色彩</b><small>从工艺到当代</small></span></button>
+          <button class="accordion-gallery__item" type="button" role="listitem"><img src="assets/museum-green-glass.jpg" alt="淄博陶瓷琉璃博物馆馆藏绿色琉璃作品" loading="lazy" /><span><b>新境</b><small>材料成为空间</small></span></button>
+        </div>
+        <a class="accordion-gallery__link page-link" href="museum.html#gallery">进入博物馆实拍档案 <span>→</span></a>
       </section>
 
       <section class="output section">
         <p class="section-tag">ZIBO LIULI / 淄博琉璃小档案</p>
         <div class="output-line"><span>01</span><h3>一门国家级非遗技艺</h3><p>琉璃烧制技艺（淄博琉璃烧制技艺）列入国家级非遗代表性项目。</p></div>
         <div class="output-line"><span>02</span><h3>一段火与色的经验</h3><p>配料、火候、热塑成型与装饰，共同塑造琉璃的通透与斑斓。</p></div>
-        <div class="output-line"><span>03</span><h3>一座与琉璃相连的城</h3><p>博山琉璃以传统技艺与当代设计并行，持续进入展厅、市场与日常生活。</p></div>
+        <div class="output-line"><span>03</span><h3>一座与琉璃相连的城</h3><p>博山琉璃以传统技艺与当代设计并行，持续进入展厅、工厂与日常生活。</p></div>
       </section>
     </main>
 
     <footer id="sources">
       <div><a class="brand" href="#top"><span>陶</span>琉·淄博</a><p>东南大学暑期社会实践<br />淄博陶瓷琉璃文化调研 · 基米小队</p></div>
-      <div class="source-list"><p>资料来源（第一版）</p>
+      <div class="source-list"><p>资料来源</p>
         <a href="https://www.ihchina.cn/project_details/14445.html" target="_blank" rel="noreferrer">中国非物质文化遗产网：琉璃烧制技艺 ↗</a>
         <a href="https://boftec.zibo.gov.cn/cec/charm/detail?charmid=805" target="_blank" rel="noreferrer">淄博外贸协会：淄博陶瓷琉璃博物馆 ↗</a>
         <a href="https://wh.zibo.gov.cn/gongkai/channel_c_5f9fa491ab327f36e4c13060_n_1605682607.5416/doc_69a7e5011aa498f7fce04a7e.html" target="_blank" rel="noreferrer">淄博市文化和旅游局：非遗代表性项目名录 ↗</a>
+        <a href="https://mp.weixin.qq.com/s/mB1m-EYf9MCLnCRKmEuslA" target="_blank" rel="noreferrer">团队公众号：淄博琉璃窑火旁的日与夜 ↗</a>
       </div>
       <p class="copyright">© 2026 ZIBO CERAMICS &amp; GLASS FIELD RESEARCH</p>
     </footer>

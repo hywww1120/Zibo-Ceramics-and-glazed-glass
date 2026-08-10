@@ -1,0 +1,40 @@
+/* 首页路线中，工厂是本次已完成实地走访的主叙事。 */
+.route-list .factory-feature {
+  grid-column: 1 / -1;
+  min-height: 560px;
+  padding: 48px;
+  background:
+    radial-gradient(circle at 78% 44%, #f1b46f33 0 10%, transparent 32%),
+    linear-gradient(118deg, #8f3427, #bd5537 54%, #6f2b26);
+}
+
+.factory-feature .route-label { margin-top: 74px; }
+.factory-feature h3 { font-size: clamp(40px, 4.7vw, 68px); max-width: 560px; }
+.factory-feature .route-copy { max-width: 440px; font-size: 15px; }
+.factory-feature ul { columns: 2; max-width: 690px; column-gap: 44px; font-size: 13px; }
+.factory-feature .arch { width: 360px; height: 455px; right: 7%; bottom: -54px; }
+.factory-feature .art-market div { width: 145px; height: 145px; left: 93px; bottom: 102px; }
+
+.route-list .museum-support {
+  grid-column: 1 / -1;
+  min-height: 560px;
+  padding: 48px;
+}
+
+.museum-support .route-label { margin-top: 74px; }
+.museum-support h3 { font-size: clamp(40px, 4.7vw, 68px); max-width: 560px; }
+.museum-support .route-copy { max-width: 440px; font-size: 15px; }
+.museum-support ul { max-width: 690px; columns: 2; column-gap: 44px; font-size: 13px; }
+.museum-support .arch { width: 360px; height: 455px; right: 7%; bottom: -54px; }
+.museum-support .art-museum div { width: 205px; height: 250px; left: 76px; bottom: 38px; }
+
+@media (max-width: 760px) {
+  .route-list .factory-feature, .route-list .museum-support { grid-column: auto; min-height: 470px; padding: 32px 28px; }
+  .factory-feature .route-label, .museum-support .route-label { margin-top: 52px; }
+  .factory-feature h3 { font-size: 38px; }
+  .factory-feature ul, .museum-support ul { columns: 1; }
+  .factory-feature .arch { width: 255px; height: 345px; right: -50px; bottom: -44px; }
+  .factory-feature .art-market div { width: 105px; height: 105px; left: 63px; bottom: 74px; }
+  .museum-support .arch { width: 255px; height: 345px; right: -50px; bottom: -44px; }
+  .museum-support .art-museum div { width: 150px; height: 180px; left: 52px; bottom: 28px; }
+}

@@ -1,0 +1,57 @@
+/* Scroll choreography: reveal important words one by one without turning the page into a distraction. */
+:root { --glow-gold: rgba(232, 184, 104, .32); }
+
+.hero, .inner-hero { isolation: isolate; }
+.hero::selection, .inner-hero::selection { background: #d3a75c; color: #14241f; }
+
+.inner-hero::before { animation: orbit-line 18s linear infinite; }
+/* 首页页眉的彩色装饰条保持静止，避免干扰首屏阅读。 */
+.hero::before { animation: none; }
+.hero::after, .inner-hero::after { animation: object-drift 8s ease-in-out infinite; }
+.hero-art::after { content: ""; position: absolute; width: 36vw; height: 36vw; right: -9vw; top: 2vw; z-index: -1; border-radius: 50%; background: radial-gradient(circle, var(--glow-gold), transparent 67%); filter: blur(8px); animation: glow-pulse 6s ease-in-out infinite; }
+
+.section-tag { overflow: hidden; }
+.section-tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; box-shadow: 0 0 0 5px color-mix(in srgb, currentColor 14%, transparent); animation: tag-pulse 2.4s ease-in-out infinite; }
+.section-tag::after { transition: width .7s var(--motion-enter, ease); }
+.reveal.in-view .section-tag::after { width: 76px; }
+
+.split-reveal { display: inline-block; }
+.split-reveal .word { display: inline-block; opacity: 0; transform: translateY(1.15em) rotate(2deg); filter: blur(7px); transition: opacity .72s var(--motion-enter, ease), transform .72s var(--motion-enter, ease), filter .72s var(--motion-enter, ease); will-change: transform, opacity, filter; }
+.split-reveal.words-visible .word { opacity: 1; transform: translateY(0) rotate(0); filter: blur(0); }
+
+.route-card::before { content: ""; position: absolute; inset: -80% -25%; background: linear-gradient(112deg, transparent 42%, #fff4 50%, transparent 58%); transform: translateX(-55%) rotate(8deg); transition: transform 1s cubic-bezier(.16, 1, .3, 1); pointer-events: none; }
+.route-card:hover::before { transform: translateX(55%) rotate(8deg); }
+.route-card .route-count { display: inline-flex; align-items: center; gap: 9px; }
+.route-card .route-count::after { content: ""; width: 0; height: 1px; background: currentColor; transition: width .55s var(--motion-enter, ease); }
+.route-card:hover .route-count::after { width: 44px; }
+
+.factory-feature { background-size: 130% 130%; animation: kiln-shift 12s ease-in-out infinite; }
+.factory-feature .art-market { animation: kiln-breathe 5s ease-in-out infinite; }
+.craft-visual, .field-art { box-shadow: inset 0 0 0 1px rgba(255,255,255,.14), 0 28px 60px rgba(20,36,31,.1); }
+.craft-visual::after, .field-art::after { animation: slow-spin 26s linear infinite; }
+
+.output-line, .question-list article, .method-steps p, .watch li { position: relative; overflow: hidden; }
+.output-line::before, .question-list article::before, .method-steps p::before, .watch li::before { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: currentColor; opacity: .28; transform: scaleX(0); transform-origin: left; transition: transform .8s var(--motion-enter, ease); }
+.in-view.output-line::before, .in-view .question-list article::before, .in-view .method-steps p::before, .in-view .watch li::before { transform: scaleX(1); }
+
+.magnetic, .nav-cta { transition: transform .3s var(--motion-enter, ease), background .3s ease, color .3s ease; }
+.nav-cta:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
+
+@keyframes orbit-line { to { transform: rotate(360deg); } }
+@keyframes object-drift { 50% { transform: translate3d(-12px, -18px, 0) rotate(-2deg); } }
+@keyframes glow-pulse { 50% { transform: scale(1.12); opacity: .68; } }
+@keyframes tag-pulse { 50% { transform: scale(.72); opacity: .45; } }
+@keyframes kiln-shift { 50% { background-position: 100% 100%; } }
+@keyframes kiln-breathe { 50% { transform: translateY(-10px) scale(1.04); } }
+@keyframes slow-spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before, .inner-hero::before, .hero::after, .inner-hero::after, .hero-art::after, .section-tag::before, .factory-feature, .factory-feature .art-market, .craft-visual::after, .field-art::after { animation: none; }
+  .split-reveal .word { opacity: 1; transform: none; filter: none; transition: none; }
+}
+
+@media (max-width: 760px) {
+  .hero-art::after { width: 85vw; height: 85vw; right: -30vw; }
+  .route-card::before { display: none; }
+  .split-reveal .word { transition-duration: .52s; }
+}
